@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '14.0'
+
+target 'WorkTimeApp' do
+  use_frameworks!
+
+pod 'SnapKit', '~> 5.0.0'
+pod 'SwiftLint'
+pod 'R.swift'
+
+pod 'UIComponents', :path => './Frameworks/UIComponents'
+pod 'AuthSDK', :path => './Frameworks/AuthSDK'
+
+end
