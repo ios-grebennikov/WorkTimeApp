@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64965F2E22813042EBFABC8C /* Pods_WorkTimeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF3E77350F2AC624A3B3FD2 /* Pods_WorkTimeApp.framework */; };
+		840FEA9A29D3191200620A5D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FEA9929D3191200620A5D /* R.generated.swift */; };
 		849C0CAA29CC5944006BDCA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CA929CC5944006BDCA6 /* AppDelegate.swift */; };
 		849C0CAC29CC5945006BDCA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CAB29CC5945006BDCA6 /* SceneDelegate.swift */; };
 		849C0CAE29CC5945006BDCA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C0CAD29CC5945006BDCA6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2D204BEBE5B3AE1A4020FD46 /* Pods-WorkTimeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkTimeApp.release.xcconfig"; path = "Target Support Files/Pods-WorkTimeApp/Pods-WorkTimeApp.release.xcconfig"; sourceTree = "<group>"; };
+		840FEA9929D3191200620A5D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		849C0CA629CC5944006BDCA6 /* WorkTimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkTimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C0CA929CC5944006BDCA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849C0CAB29CC5945006BDCA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +48,6 @@
 				DA7778682407535F8946999C /* Pods-WorkTimeApp.debug.xcconfig */,
 				2D204BEBE5B3AE1A4020FD46 /* Pods-WorkTimeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -56,6 +57,22 @@
 				8FF3E77350F2AC624A3B3FD2 /* Pods_WorkTimeApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		840FEA9729D3182100620A5D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				840FEA9829D3189600620A5D /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		840FEA9829D3189600620A5D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				840FEA9929D3191200620A5D /* R.generated.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		849C0C9D29CC5944006BDCA6 = {
@@ -79,6 +96,7 @@
 		849C0CA829CC5944006BDCA6 /* WorkTimeApp */ = {
 			isa = PBXGroup;
 			children = (
+				840FEA9729D3182100620A5D /* Resources */,
 				849C0CBE29CC5BED006BDCA6 /* Application */,
 				849C0CBD29CC5BB4006BDCA6 /* SupportingFiles */,
 				849C0CAD29CC5945006BDCA6 /* ViewController.swift */,
@@ -117,6 +135,7 @@
 				849C0CA329CC5944006BDCA6 /* Frameworks */,
 				849C0CA429CC5944006BDCA6 /* Resources */,
 				5A73DD32C86F148F97AEB351 /* [CP] Embed Pods Frameworks */,
+				840FEA9629D317CB00620A5D /* R Generate */,
 			);
 			buildRules = (
 			);
@@ -212,6 +231,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorkTimeApp/Pods-WorkTimeApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		840FEA9629D317CB00620A5D /* R Generate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "R Generate";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/WorkTimeApp/Resources/Generated/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,6 +260,7 @@
 				849C0CAE29CC5945006BDCA6 /* ViewController.swift in Sources */,
 				849C0CAA29CC5944006BDCA6 /* AppDelegate.swift in Sources */,
 				849C0CAC29CC5945006BDCA6 /* SceneDelegate.swift in Sources */,
+				840FEA9A29D3191200620A5D /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
