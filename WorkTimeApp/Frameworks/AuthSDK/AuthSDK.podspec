@@ -18,5 +18,7 @@ Pod::Spec.new do |s|
   ]
 
   s.dependency 'R.swift'
+  s.dependency 'UIComponents'
 
 end
+  
